@@ -56,14 +56,13 @@ scrollLinks.forEach((btn) => {
     let linksContainerHeight = linksContainer.getBoundingClientRect().height;
     let fixedNavbar = navbar.classList.contains("fixed-nav");
     let position = section.offsetTop;
-    position = position-navbarHeight;
+    position = position - navbarHeight;
     if (!fixedNavbar) {
-      position -= navbarHeight; 
+      position -= navbarHeight;
     }
-    if (navbarHeight>82) {
-      position += linksContainerHeight;  
+    if (navbarHeight > 82) {
+      position += linksContainerHeight;
     }
-    console.log(position);
     window.scrollTo({
       left: 0,
       top: position,
